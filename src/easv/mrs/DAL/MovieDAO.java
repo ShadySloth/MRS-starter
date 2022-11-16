@@ -39,6 +39,9 @@ public class MovieDAO implements IMovieDataAccess {
 
     @Override
     public Movie createMovie(String title, int year) throws Exception {
+        System.out.println(title);
+        System.out.println(year);
+
         return null;
     }
 
