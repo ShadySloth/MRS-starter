@@ -28,8 +28,8 @@ public class MovieManager {
         return searchResult;
     }
 
-    public void createNewMovie(String title, int year) throws Exception {
-        movieDAO.createMovie(title, year);
+    public Movie createNewMovie(String title, int year) throws Exception {
+        return movieDAO.createMovie(title, year);
     }
 
 }

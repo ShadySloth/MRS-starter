@@ -61,7 +61,7 @@ public class MovieViewController implements Initializable {
 
 
     public void handleAddNewMovie(ActionEvent actionEvent) {
-        System.out.println("Added new movie " + txtTitle.getText());
+        System.out.println("Added new movie: " + txtTitle.getText());
 
         String title = txtTitle.getText();
         int year = Integer.parseInt(txtYear.getText());
