@@ -32,7 +32,29 @@ public class MovieModel {
     }
 
     public void createNewMovie(String title, int year) throws Exception {
+        //Create movie to data storage
         Movie m = movieManager.createNewMovie(title, year);
+
+        //Add movie to observable list
         moviesToBeViewed.add(m);
+    }
+
+    public void updateMovie(Movie updatedMovie) throws Exception {
+        //Call BLL
+        //update movie in db
+        movieManager.updateMovie(updatedMovie);
+
+        //update ListView
+        moviesToBeViewed.clear();
+        moviesToBeViewed.addAll(movieManager.getAllMovies());
+    }
+
+    public void deleteMovie(Movie selectedMovie) throws Exception {
+        //delete movie in db
+        movieManager.deleteMovie(selectedMovie);
+
+        //update ListView
+        moviesToBeViewed.clear();
+        moviesToBeViewed.addAll(movieManager.getAllMovies());
     }
 }
